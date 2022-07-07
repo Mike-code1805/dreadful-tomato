@@ -2,6 +2,15 @@
 
 .footer {
   position: relative;
-  background-color: black;
-    
+  background-color: $black;
+  &--promotion {
+    border: 2px solid $blue;
+    display: flex;
+    justify-content: center;
+  }
+  &--message {
+    border: 2px solid $yellow;
+    display: flex;
+    justify-content: center;
+  }
 }
