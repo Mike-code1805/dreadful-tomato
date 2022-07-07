@@ -1,0 +1,8 @@
+@use "/src/scss/index" as *;
+
+.linkFooter {
+  position: relative;
+  &--span{
+    color: $white;
+  }
+}

@@ -1,6 +1,7 @@
 @use "/src/scss/index" as *;
 
-.linkFooter {
+.message {
   position: relative;
-  background-color: black;
+  color: $white;
+  margin: 0% 2% 2% 2%;
 }
