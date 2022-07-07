@@ -4,7 +4,7 @@ import "./styles.scss";
 const LinkFooter = ({ text, onClick }) => {
   return (
     <div onClick={onClick} className="linkFooter">
-      <span className="linkFooter--span">{text}</span>
+      <span className="linkFooter__span">{text}</span>
     </div>
   );
 };

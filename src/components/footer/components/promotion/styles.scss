@@ -4,7 +4,30 @@
   position: relative;
   border: 2px solid $white;
   border-radius: 10px;
-  width: 15%;
-  margin: 2% 2% 2% 2%;
-  padding: 0.5%;
+  width: fit-content;
+  @include breakpoint(sm) {
+    margin: 2% 2% 2% 2%;
+    padding: 0.5%;
+    color: $white;
+  }
+  display: flex;
+  &__img {
+    width: 50px;
+    padding: 0px 10px 0px 10px;
+  }
+  &__h1 {
+    display: flexbox;
+    flex-direction: row;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    &__textFirst {
+      font-size: 10px;
+      margin-bottom: 0;
+    }
+    &__textSecond {
+      font-size: 20px;
+      margin-top: 0;
+    }
+  }
 }

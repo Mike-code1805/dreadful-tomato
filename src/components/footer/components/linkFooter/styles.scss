@@ -1,8 +1,15 @@
 @use "/src/scss/index" as *;
 
 .linkFooter {
+  padding: 10px;
   position: relative;
-  &--span{
+  &__span {
     color: $white;
+    font-size: 30px;
+    &:hover {
+      text-decoration: underline;
+      color: $gray-light;
+      cursor: pointer;
+    }
   }
 }
