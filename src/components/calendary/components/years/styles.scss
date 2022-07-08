@@ -8,11 +8,12 @@
   padding: 0px 0px 0px 0px;
   margin-top: auto;
   margin-bottom: auto;
-  overflow-y: hidden;
   cursor: pointer;
+  transition: .3s ease all;
+	z-index: 10;
   &__items {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 320px;
   }
 }

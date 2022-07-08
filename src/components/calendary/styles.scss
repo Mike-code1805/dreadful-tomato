@@ -2,17 +2,20 @@
 
 .calendary {
   position: relative;
-  border: 1px solid $black;
-  background-color: $red;
+  background-color: $gray;
   height: auto;
   padding: 0px 150px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   cursor: pointer;
+	z-index: 10;
   &__arrows{
     display: flex;
     justify-content: flex-end;
     background-color: $red;
+  }
+  &__list{
+    overflow-y: hidden;
   }
 }
