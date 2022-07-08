@@ -24,10 +24,12 @@
     &__textFirst {
       font-size: 10px;
       margin-bottom: 0;
+      font-family: $font;
     }
     &__textSecond {
       font-size: 20px;
       margin-top: 0;
+      font-family: $font;
     }
   }
 }
