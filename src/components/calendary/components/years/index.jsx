@@ -1,21 +1,20 @@
 import React from "react";
+import datesCount from "../../../../shared/data/years";
 import Year from "../year";
 import "./styles.scss";
 
-const Years = () => {
-  const Y = [];
-  let initialYear = 1920;
-  let finallyYear = 2022;
-  let ArrayYear = initialYear;
-  for (let i = 0; i <= finallyYear - initialYear; i++) {
-    Y.push(ArrayYear);
-    ArrayYear++;
-  }
+const Years = ({ refe }) => {
   return (
-    <div className="years">
-      {Y.map((item) => (
-        <Year key={item} text={item} />
-      ))}
+    <div className="years" ref={refe}>
+      {datesCount.map((items) => {
+        return (
+          <div key={items} className="years__items">
+            {items.map((item) => {
+              return <Year key={item} text={item} />;
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 };

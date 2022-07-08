@@ -4,11 +4,15 @@
   position: relative;
   border: 1px solid $black;
   background-color: $red;
-  height: 160px;
+  height: auto;
   padding: 0px 150px 0px 0px;
   display: flex;
-  justify-content: right;
-  margin-top: auto;
-  margin-bottom: auto;
+  flex-direction: column;
+  align-items: flex-end;
   cursor: pointer;
+  &__arrows{
+    display: flex;
+    justify-content: flex-end;
+    background-color: $red;
+  }
 }

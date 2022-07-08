@@ -3,22 +3,16 @@
 .years {
   position: relative;
   background-color: $white;
-  width: 270px;
   height: 160px;
+  width: 270px;
   padding: 0px 0px 0px 0px;
-  display: flex;
-  flex-wrap: wrap;
   margin-top: auto;
   margin-bottom: auto;
+  overflow-y: hidden;
   cursor: pointer;
-  &__text {
-    margin-top: auto;
-    margin-bottom: auto;
-    font-family: $font;
-    font-size: 17px;
-    color: $white;
-  }
-  &:active {
-    background-color: darken($red, 10%);
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 320px;
   }
 }
