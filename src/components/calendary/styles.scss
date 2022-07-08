@@ -1,0 +1,14 @@
+@use "/src/scss/index" as *;
+
+.calendary {
+  position: relative;
+  border: 1px solid $black;
+  background-color: $red;
+  height: 160px;
+  padding: 0px 150px 0px 0px;
+  display: flex;
+  justify-content: right;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
