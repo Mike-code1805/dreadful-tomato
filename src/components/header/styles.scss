@@ -5,6 +5,8 @@
   background-color: $black;
   color: $white;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
   &__img {
     display: flex;
     justify-content: center;
@@ -12,9 +14,8 @@
       width: 220px;
     }
   }
-  &__linkFooter {
+  &__links {
     display: flex;
-    flex-flow: row wrap;
     min-width: 500px;
     justify-content: center;
   }

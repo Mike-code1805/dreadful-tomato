@@ -12,5 +12,8 @@
       color: $gray-light;
       cursor: pointer;
     }
+    &:active {
+      color: $gray-dark;
+    }
   }
 }

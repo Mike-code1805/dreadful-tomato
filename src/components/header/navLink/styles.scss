@@ -1,0 +1,12 @@
+@use "/src/scss/index" as *;
+
+.navLink {
+  position: relative;
+  padding: 10px;
+  background-color: $black;
+  color: $white;
+  width: fit-content;
+  &:hover{
+    background-color: $red;
+  }
+}
