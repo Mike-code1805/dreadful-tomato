@@ -1,0 +1,26 @@
+@use "/src/scss/index" as *;
+
+.trialMessage {
+  position: relative;
+  border-radius: 25px;
+  background-color: $red;
+  width: 200px;
+  height: 35px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  cursor: pointer;
+  &__text {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: $font;
+    font-size: 17px;
+    color: $white;
+  }
+  &:active {
+    background-color: darken($red, 10%);
+  }
+}

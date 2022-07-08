@@ -6,10 +6,14 @@
   &__span {
     color: $white;
     font-size: 30px;
+    font-family: $font;
     &:hover {
       text-decoration: underline;
       color: $gray-light;
       cursor: pointer;
+    }
+    &:active {
+      color: $gray-dark;
     }
   }
 }

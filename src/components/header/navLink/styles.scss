@@ -1,0 +1,33 @@
+@use "/src/scss/index" as *;
+
+.navLink {
+  position: relative;
+  padding: 0px 10px 0px 0px;
+  background-color: $black;
+  width: fit-content;
+  display: flex;
+  cursor: pointer;
+  &__image {
+    padding: 5px 5px 5px 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    &__img {
+      width: 40px;
+    }
+  }
+  &__text {
+    margin-top: auto;
+    margin-bottom: auto;
+    &__h1 {
+      font-family: $font;
+      font-size: 17px;
+      color: $white;
+    }
+  }
+  &:hover {
+    background-color: $red;
+  }
+  &:active {
+    background-color: darken($red, 10%);
+  }
+}

@@ -1,0 +1,36 @@
+@use "/src/scss/index" as *;
+
+.navFilter {
+  position: relative;
+  padding: 5px 10px 5px 5px;
+  background-color: $black;
+  width: fit-content;
+  display: flex;
+  cursor: pointer;
+  &__image {
+    padding: 5px 5px 5px 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    &__img {
+      width: 30px;
+    }
+  }
+  &__text {
+    margin-top: auto;
+    margin-bottom: auto;
+    &__h1 {
+      font-family: $font;
+      font-size: 17px;
+      color: $white;
+    }
+  }
+  &:hover {
+    background-color: $gray;
+  }
+  &:active {
+    background-color: darken($gray, 10%);
+  }
+  &::after {
+    background-color: darken($gray, 10%);
+  }
+}
