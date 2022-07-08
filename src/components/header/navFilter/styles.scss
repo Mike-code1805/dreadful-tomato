@@ -1,8 +1,8 @@
 @use "/src/scss/index" as *;
 
-.navLink {
+.navFilter {
   position: relative;
-  padding: 0px 10px 0px 0px;
+  padding: 5px 10px 5px 5px;
   background-color: $black;
   width: fit-content;
   display: flex;
@@ -12,7 +12,7 @@
     margin-top: auto;
     margin-bottom: auto;
     &__img {
-      width: 40px;
+      width: 30px;
     }
   }
   &__text {
@@ -25,9 +25,12 @@
     }
   }
   &:hover {
-    background-color: $red;
+    background-color: $gray;
   }
   &:active {
-    background-color: darken($red, 10%);
+    background-color: darken($gray, 10%);
+  }
+  &::after {
+    background-color: darken($gray, 10%);
   }
 }

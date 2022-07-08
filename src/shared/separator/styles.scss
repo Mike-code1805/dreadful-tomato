@@ -1,0 +1,9 @@
+@use "/src/scss/index" as *;
+
+.separator {
+  position: relative;
+  border-left: 2px solid $white;
+  height: 45px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
