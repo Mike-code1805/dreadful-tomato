@@ -1,0 +1,25 @@
+@use "/src/scss/index" as *;
+
+.year {
+  position: relative;
+  background-color: $white;
+  width: 90px;
+  height: 40px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: $gray-light;
+  &__text {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: $font;
+  }
+  &:hover{
+    color: $white;
+    background-color: $red;    
+  }
+  &:active {
+    background-color: darken($red, 10%);
+  }
+}
