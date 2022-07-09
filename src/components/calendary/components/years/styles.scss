@@ -5,14 +5,18 @@
   background-color: $white;
   height: 160px;
   width: 270px;
+  display: flex;
+  flex-flow: row wrap;
   padding: 0px 0px 0px 0px;
   margin-top: auto;
   margin-bottom: auto;
   cursor: pointer;
-  transition: .3s ease all;
-	z-index: 10;
+  transition: 0.3s ease all;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 0px 0px 10px 10px;
   &__items {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
   }

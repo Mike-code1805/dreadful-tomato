@@ -4,6 +4,7 @@ import Year from "../year";
 import "./styles.scss";
 
 const Years = ({ refe }) => {
+  console.log(datesCount);
   return (
     <div className="years" ref={refe}>
       {datesCount.map((items) => {

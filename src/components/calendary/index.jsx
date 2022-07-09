@@ -9,8 +9,8 @@ const Calendary = () => {
   const handleClickRight = () => {
     if (slide.current.children.length > 0) {
       const firstElement = slide.current.children[0];
-      slide.current.style.transition = `${200}ms ease-out all`;
-      slide.current.style.transform = `translateY(-${160}px)`;
+      slide.current.style.transition = `${10}ms ease-out all`;
+      slide.current.style.transform = `translateX(-${160}px)`;
       const transition = () => {
         slide.current.style.transition = "none";
         slide.current.style.transform = `translateX(0)`;
@@ -28,17 +28,20 @@ const Calendary = () => {
       slide.current.insertBefore(lastElement, slide.current.firstChild);
 
       slide.current.style.transition = "none";
-      slide.current.style.transform = `translateY(-${160}px)`;
+      slide.current.style.transform = `translateX(-${160}px)`;
 
       setTimeout(() => {
-        slide.current.style.transition = `${200}ms ease-out all`;
-        slide.current.style.transform = `translateY(0)`;
+        slide.current.style.transition = `${0}ms ease-out all`;
+        slide.current.style.transform = `translateX(0)`;
       }, 30);
     }
   };
-  
+
   return (
     <div className="calendary">
+      <div className="calendary__match">
+        <h1 className="calendary__match__h1">{"🠹"}</h1>
+      </div>
       <div className="calendary__arrows">
         <Arrows
           onClickRight={handleClickRight}

@@ -2,7 +2,6 @@
 
 .calendary {
   position: relative;
-  background-color: $gray;
   height: auto;
   padding: 0px 150px 0px 0px;
   display: flex;
@@ -10,10 +9,19 @@
   align-items: flex-end;
   cursor: pointer;
 	z-index: 10;
+  &__match{
+    margin-right: 10px;
+    color: darken($red, 5%);
+    font-size: 30px;
+    margin-bottom: -80px;
+    margin-top: -95px;
+    font-weight: bold;
+    
+  }
   &__arrows{
     display: flex;
     justify-content: flex-end;
-    background-color: $red;
+    background-color: darken($red, 5%);
   }
   &__list{
     overflow-y: hidden;

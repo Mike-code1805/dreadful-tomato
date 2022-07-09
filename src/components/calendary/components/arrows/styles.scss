@@ -10,13 +10,26 @@
   color: $white;
   font-family: $font;
   font-weight: bold;
+  border-radius: 100px;
   &__left {
     font-size: 20px;
     margin-right: 15px;
+    &:hover{
+      color: $gray-dark;
+    }
+    &:active {
+      background-color: darken($red, 10%);
+    }
   }
   &__right {
     margin-left: 15px;
     font-size: 20px;
+    &:hover{
+      color: $gray-dark;
+    }
+    &:active {
+      background-color: darken($red, 10%);
+    }
   }
   &__text {
     margin-top: auto;
