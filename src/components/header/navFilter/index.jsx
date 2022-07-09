@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.scss";
 
-const NavFilter = ({ src, text }) => {
+const NavFilter = ({ src, text, onClick }) => {
   return (
-    <div className="navFilter">
+    <div onClick={onClick} className="navFilter">
       <div className="navFilter__image">
         <img className="navFilter__image__img" src={src} alt="" />
       </div>
