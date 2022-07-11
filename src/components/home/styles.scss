@@ -1,0 +1,10 @@
+@use "/src/scss/index" as *;
+
+.home {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  min-width: 500px;
+  width: 100%;
+}

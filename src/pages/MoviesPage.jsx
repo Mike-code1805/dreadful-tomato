@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Footer from "../components/footer";
+import Header from "../components/header";
 
 const MoviesPage = () => {
   return (
-    <div>MoviesPage</div>
-  )
-}
+    <div>
+      <Header />
+      <Footer />
+    </div>
+  );
+};
 
-export default MoviesPage
+export default MoviesPage;
