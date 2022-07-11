@@ -9,8 +9,8 @@ const Cart = ({ logo, image, title, year, description }) => {
       </div>
       <div className="cart__info">
         <div className="cart__info__title">{title}</div>
-        <div  className="cart__info__year">
-          <img className="cart__info__year__l" src={logo} />
+        <div className="cart__info__year">
+          <img className="cart__info__year__l" src={logo} alt=""  />
           <div className="cart__info__year__y">{year}</div>
         </div>
 

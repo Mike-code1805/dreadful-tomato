@@ -3,10 +3,11 @@
 .cart {
   position: relative;
   background-color: $black;
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 350px;
   overflow: hidden;
   border-radius: 10px;
+  margin: 5px;
   &__image {
     width: inherit;
     height: inherit;
@@ -26,7 +27,7 @@
     height: 70%;
     top: 0;
     left: 0;
-    transform: translateY(120%);
+    transform: translateY(130%);
     transition: 0.3s ease all;
     padding: 15px;
     &__title {

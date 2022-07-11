@@ -4,23 +4,21 @@ import MoviesPage from "./pages/MoviesPage";
 import NotFound from "./pages/NotFound";
 import TvShowsPage from "./pages/TvShowsPage";
 import "./styles.scss";
-import Data from "./data.json"
-
+import Data from "./data.json";
+export const DataM = Data;
 function App() {
   return (
     <>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/series" element={<TvShowsPage />} />
-          <Route path="/movies" element={<MoviesPage />} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/series" element={<TvShowsPage />} />
+        <Route path="/movies" element={<MoviesPage />} />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }
-
-export const DataM = Data;
 
 export default App;

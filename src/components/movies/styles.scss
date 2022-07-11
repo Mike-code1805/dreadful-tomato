@@ -2,19 +2,30 @@
 
 .movies {
   background-color: $black;
-  border: 2px solid $blue;
-  color: $white;
+  position: relative;
   display: flex;
-  flex-flow: row wrap;
+  color: $white;
   justify-content: center;
   padding: 0px 100px 0px 100px;
   min-width: 500px;
-  height: 2000px;
-  &__movieList {
-    margin: 2px;
+  height: 780px;
+  // overflow: hidden;
+  transition: opacity .5s;
+  &__items {
+    position: absolute;
+    justify-content: center;
     display: flex;
-    align-items: center;
-    width: 200px;
-    height: 250px;
+    flex-wrap: wrap;
+    width: 1100px;
+    height: 760px;
+    &:first-child{
+      opacity: 1;
+    }
   }
+}
+
+.slider_movies{
+  position: relative;
+  display: flex;
+  justify-content: center;
 }

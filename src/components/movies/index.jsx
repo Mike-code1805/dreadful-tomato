@@ -1,38 +1,70 @@
-import React, { useEffect, useState } from "react";
-import { DataM } from "../../App";
+import React, { useRef } from "react";
+import dataMovie from "../../shared/data/dataMovie";
+
 import Cart from "./cart";
+import Slider from "./Slider";
 import "./styles.scss";
 
 const Movies = () => {
+  const dataMovies = dataMovie();
+  const slide = useRef(null);
+
+  const handleClickRight = () => {
+    if (slide.current.children.length > 0) {
+      const firstElement = slide.current.children[0];
+      slide.current.style.transition = `${10}ms ease-out all`;
+      slide.current.style.transform = `translateX(-${160}px)`;
+      const transition = () => {
+        slide.current.style.transition = "none";
+        slide.current.style.transform = `translateX(0)`;
+        slide.current.appendChild(firstElement);
+        slide.current.removeEventListener("transitionend", transition);
+      };
+      slide.current.addEventListener("transitionend", transition);
+    }
+  };
+
+  const handleClickLeft = () => {
+    if (slide.current.children.length > 0) {
+      const index = slide.current.children.length - 1;
+      const lastElement = slide.current.children[index];
+      slide.current.insertBefore(lastElement, slide.current.firstChild);
+
+      slide.current.style.transition = "none";
+      slide.current.style.transform = `translateX(-${160}px)`;
+
+      setTimeout(() => {
+        slide.current.style.transition = `${100}ms ease-out all`;
+        slide.current.style.transform = `translateX(0)`;
+      }, 30);
+    }
+  };
   return (
-    <div className="movies">
-      {DataM[0].entries.map(
-        ({ title, description, images, releaseYear, programType }) =>
-          programType == "movie" ? (
-            <div className="movies__movieList">
-              <Cart
-                key={title}
-                title={title}
-                year={releaseYear}
-                description={description}
-                image={images["Poster Art"].url}
-                logo={"calendar.png"}
-              />
+    <>
+      <div className="movies" ref={slide}>
+        {dataMovies.map((items) => {
+          return (
+            <div key={items[0].title} className="movies__items">
+              {items.map((item) => {
+                return (
+                  <Cart
+                    key={item.title}
+                    title={item.title}
+                    year={item.releaseYear}
+                    description={item.description}
+                    image={item.images["Poster Art"].url}
+                    logo={"calendar.png"}
+                  />
+                );
+              })}
             </div>
-          ) : null
-      )}
-      <Cart
-        title={"Wolf"}
-        year={"2016"}
-        description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        }
-        image={
-          "https://streamcoimg-a.akamaihd.net/000/128/61/12861-PosterArt-ec32a81986a45eac7e080112075ab466.jpg"
-        }
-        logo={"calendar.png"}
-      />
-    </div>
+          );
+        })}
+      </div>
+      <div className="slider_movies">
+        <Slider onClickLeft={handleClickLeft} onClickRight={handleClickRight} len={dataMovies.length} />
+      </div>
+    </>
   );
 };
 
