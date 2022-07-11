@@ -4,6 +4,7 @@ import MoviesPage from "./pages/MoviesPage";
 import NotFound from "./pages/NotFound";
 import TvShowsPage from "./pages/TvShowsPage";
 import "./styles.scss";
+import Data from "./data.json"
 
 function App() {
   return (
@@ -19,5 +20,7 @@ function App() {
     </>
   );
 }
+
+export const DataM = Data;
 
 export default App;
