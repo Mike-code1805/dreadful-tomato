@@ -1,0 +1,64 @@
+@use "/src/scss/index" as *;
+
+.cart {
+  position: relative;
+  background-color: $black;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 5px;
+  &__image {
+    width: inherit;
+    height: inherit;
+    &__img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+  &__info {
+    background: $black;
+    opacity: 80%;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+    height: 70%;
+    top: 0;
+    left: 0;
+    transform: translateY(130%);
+    transition: 0.3s ease all;
+    padding: 15px;
+    &__title {
+      font-weight: bold;
+      font-size: larger;
+      font-size: 14px;
+    }
+    &__year {
+      font-weight: bold;
+      font-size: medium;
+      font-size: 11px;
+      display: flex;
+      &__l {
+        width: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      &__y {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 2px;
+      }
+    }
+    &__description {
+      margin-top: 5px;
+      font-size: 11px;
+    }
+  }
+  &:hover {
+    .cart__info {
+      transform: translateY(35%);
+    }
+  }
+}

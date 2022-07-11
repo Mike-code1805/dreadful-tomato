@@ -7,13 +7,12 @@ import TrialMessage from "./trialMessage";
 import "./styles.scss";
 import { useRouter } from "../../hooks/useRouter";
 import { useToggle } from "../../hooks/useToggle";
-import Calendary from "../calendary";
-import Filter from "../filter";
+import Calendary from "./calendary";
+import Filter from "./filter";
 
 const Header = () => {
   const { gotoHome, gotoMovies, gotoSeries } = useRouter();
-  const { open, handleToggle } = useToggle();
-  console.log(open);
+  const { open, openCalen, handleToggle, handleToggleCalen } = useToggle();
   return (
     <>
       <div className="header">
@@ -40,8 +39,14 @@ const Header = () => {
       </div>
       {open ? (
         <>
-          <Filter />
-          <Calendary />
+          <Filter onClick={handleToggleCalen} />
+          {openCalen ? (
+            <>
+              <div className="calendary_header">
+                <Calendary />
+              </div>
+            </>
+          ) : null}
         </>
       ) : null}
     </>

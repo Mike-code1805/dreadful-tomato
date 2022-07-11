@@ -1,0 +1,24 @@
+@use "/src/scss/index" as *;
+
+.navText {
+  position: relative;
+  padding: 0px 10px 0px 0px;
+  background-color: $black;
+  width: fit-content;
+  display: flex;
+  &__text {
+    margin-top: auto;
+    margin-bottom: auto;
+    &__h1 {
+      font-family: $font;
+      font-size: 17px;
+      color: $white;
+    }
+  }
+  &:hover {
+    background-color: $red;
+  }
+  &:active {
+    background-color: darken($red, 10%);
+  }
+}

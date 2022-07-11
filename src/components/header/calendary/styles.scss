@@ -1,7 +1,7 @@
 @use "/src/scss/index" as *;
 
 .calendary {
-  position: relative;
+  position: absolute;
   height: auto;
   padding: 0px 150px 0px 0px;
   display: flex;
