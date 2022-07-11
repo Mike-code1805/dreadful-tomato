@@ -1,15 +1,13 @@
 import React from "react";
-import Calendary from "../components/calendary";
-import Filter from "../components/filter";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Home from "../components/home";
 
 const HomePage = () => {
   return (
     <div>
       <Header />
-      <Filter />
-      <Calendary />
+      <Home />
       <Footer />
     </div>
   );

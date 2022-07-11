@@ -1,0 +1,30 @@
+@use "/src/scss/index" as *;
+
+.imageHome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  opacity: 60%;
+  &__img {
+    width: 100%;
+  }
+  &__text {
+    background: $red;
+    height: 70px;
+    margin-top: -70px;
+    opacity: 90%;
+    font-family: $font;
+    &__h1 {
+      margin-top: 18px;
+      margin-bottom: auto;
+      margin-left: 10px;
+    }
+    &:hover {
+      opacity: 100%;
+    }
+  }
+  &:hover {
+    opacity: 100%;
+  }
+}

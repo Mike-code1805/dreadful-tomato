@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.scss";
 
-const NavLink = ({ src, text }) => {
+const NavLink = ({ src, text, onClick }) => {
   return (
-    <div className="navLink">
+    <div className="navLink" onClick={onClick}>
       <div className="navLink__image">
         <img className="navLink__image__img" src={src} alt="" />
       </div>
