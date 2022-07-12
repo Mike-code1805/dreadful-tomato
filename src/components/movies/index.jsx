@@ -62,7 +62,12 @@ const Movies = () => {
         })}
       </div>
       <div className="slider_movies">
-        <Slider onClickLeft={handleClickLeft} onClickRight={handleClickRight} len={dataMovies.length} />
+        <Slider
+          onClickButton={handleClickRight}
+          onClickLeft={handleClickLeft}
+          onClickRight={handleClickRight}
+          len={dataMovies.length}
+        />
       </div>
     </>
   );

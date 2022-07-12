@@ -19,14 +19,13 @@ const dataMovie = () => {
     for (let index = 0; index < dataOnlyMovies.length % 8; index++) {
       dataOnlyMovies.push(dataOnlyMovies[index]);
     }
-    console.log(dataOnlyMovies.length)
     for (let i = 0; i < dataOnlyMovies.length; i++) {
       const subArray = dataOnlyMovies.slice(i, i + 8);
       datasMovie.push(subArray);
       i += 7;
     }
   }
-  console.log(datasMovie);
+
   return datasMovie;
 };
 
