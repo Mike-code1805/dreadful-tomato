@@ -1,13 +1,14 @@
-import React, { useRef } from "react";
-import dataMovie from "../../shared/data/dataMovie";
+import React, { useContext, useRef } from "react";
+import DataContext from "../../context/DataContext";
 
 import Cart from "./cart";
 import Slider from "./Slider";
 import "./styles.scss";
 
 const Movies = () => {
-  const dataMovies = dataMovie();
   const slide = useRef(null);
+
+  const { data } = useContext(DataContext);
 
   const handleClickRight = () => {
     if (slide.current.children.length > 0) {
@@ -39,10 +40,11 @@ const Movies = () => {
       }, 30);
     }
   };
+
   return (
     <>
       <div className="movies" ref={slide}>
-        {dataMovies.map((items) => {
+        {data.map((items) => {
           return (
             <div key={items[0].title} className="movies__items">
               {items.map((item) => {
@@ -66,7 +68,7 @@ const Movies = () => {
           onClickButton={handleClickRight}
           onClickLeft={handleClickLeft}
           onClickRight={handleClickRight}
-          len={dataMovies.length}
+          len={data.length}
         />
       </div>
     </>
