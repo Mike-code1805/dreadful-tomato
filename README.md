@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Dreadful Tomato
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dreadful Tomato is a new platform to find new movies and TV shows. The main objective is to
+ help users to find information about their favourite TV shows and movies.
+ 
+To do so, the company has to create a new web app that allow users do some fancy things.
 
-## Available Scripts
+## What do you have to do?
 
-In the project directory, you can run:
+Dreadful Tomato needs to implement an awesome webpage where the users could view information
+ about almost every new TV Shows and movie.
+ 
+The Design team has sent us the new interface which has to be implemented. As you could see,
+ there are three different pages.
+ 
+* The first page is a landing page where user could select whether she wants to see TV shows
+ or movies and some claims and logo of Dreadful Tomato
+* The second one is the list of TV shows. Here, the user could filter TV shows by title and
+ release year. In that page the user will see a list of card with the Title, description
+ and image from each TV show. 
+* The third one is quite similar, but for the movies. The user could filter by title and
+ release year as well, to see a list of cards with the information of every movie.
+ 
+Here you could see the design of the 3 pages:
 
-### `npm start`
+Home page:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](images/Dreadful%20Tomato%20-%20HOME.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+TV shows page:
 
-### `npm test`
+![](images/Dreadful%20Tomato%20-%20POPULAR%20SERIES.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Movies page:
 
-### `npm run build`
+![](images/Dreadful%20Tomato%20-%20POPULAR%20MOVIES.png) 
+ 
+## Technical Requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Their CTO has no time to implement that, but she has defined some technical constraints:
+ 
+ * This webapp has to be develop using React
+ * Create reusable components
+ * Create a **clean, maintainable and well-designed** code
+ * Test your code until you are comfortable with that
+ 
+#### Considerations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ * To obtain the data of the TV Shows and Movies, you have to request [that file](https://gitlab.com/-/snippets/2041384/raw/master/data.json).
+ * Use SCSS or SASS to manage your stylesheets
+ * Use any component you want in the date picker to allow the user select the Year
+ * Pay attention to hover effects (Home and Shows/Movies cards) 
+ 
+To understand how you take decisions during the implementation, please write a README file
+ explaining some of the most important parts of the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## How to submit your solution
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Push your code to the `devel` branch - we encourage you to commit regularly to show your thinking process was.
+* **Create a new Pull Request** to `main` branch & **merge it**.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once merged you **won't be able to change or add** anything to your solution, so double-check that everything is as
+you expected!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Remember that **there is no countdown**, so take your time and implement a solution that you are proud!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+# My notes by Bryan David Tamayo Abad
+This steps are I have done by this project:
+1. Creation components *Footer.jsx, Header.jsx, Home.jsx, Movies.jsx and Series.jsx* in folder *src/components*.
+2. Creation pages *HomePage.jsx, MoviesPage.jsx and TvShowPage.jsx* in folder *src/pages*
+3. Creation router with react-router-dom in folder *src/App.js*.
+4. Definition context and hooks for components.
+5. Creation components shareds in folder *src/shared*.
+6. Cleaned code.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run project:<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    npm install
+    npm start
