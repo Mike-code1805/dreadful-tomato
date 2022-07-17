@@ -68,7 +68,7 @@ Remember that **there is no countdown**, so take your time and implement a solut
 
 ---
 
-# My notes by Bryan David Tamayo Abad
+# My notes by Miguel Enrique Saca Accostupa
 This steps are I have done by this project:
 1. Creation components *Footer.jsx, Header.jsx, Home.jsx, Movies.jsx and Series.jsx* in folder *src/components*.
 2. Creation pages *HomePage.jsx, MoviesPage.jsx and TvShowPage.jsx* in folder *src/pages*
