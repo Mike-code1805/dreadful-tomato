@@ -1,0 +1,54 @@
+@use "/src/scss/index" as *;
+
+.dating {
+  position: relative;
+  border-radius: 25px;
+  background-color: $white;
+  width: 20%;
+  height: 35px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  cursor: pointer;
+  &__image {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    &__img {
+      width: 25px;
+    }
+  }
+  &__input {
+    width: 60%;
+    height: 70%;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-family: $font;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__button {
+    width: 60%;
+    height: 70%;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: $font;
+    cursor: pointer;
+    background-color: $red;
+    border-radius: 10px;
+    color: $white;
+    &:active {
+      background-color: darken($red, 15%);;
+    }
+  }
+}

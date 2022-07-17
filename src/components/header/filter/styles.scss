@@ -1,0 +1,27 @@
+@use "/src/scss/index" as *;
+
+.filter {
+  padding: 0px 150px 0px 150px;
+  background-color: $red;
+  color: $white;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  &__links {
+    display: flex;
+    min-width: 500px;
+    &__logo {
+      cursor: pointer;
+      padding: 0px 40px 0px 0px;
+      margin-top: auto;
+      margin-bottom: auto;
+      &__img {
+        width: 200px;
+      }
+    }
+  }
+  &__utils {
+    display: flex;
+    justify-content: center;
+  }
+}

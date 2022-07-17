@@ -1,0 +1,31 @@
+@use "/src/scss/index" as *;
+
+.movies {
+  background-color: $black;
+  position: relative;
+  display: flex;
+  color: $white;
+  justify-content: center;
+  padding: 0px 100px 0px 100px;
+  min-width: 500px;
+  height: 780px;
+  // overflow: hidden;
+  transition: opacity .5s;
+  &__items {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+    height: 760px;
+    &:first-child{
+      opacity: 1;
+    }
+  }
+}
+
+.slider_movies{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}

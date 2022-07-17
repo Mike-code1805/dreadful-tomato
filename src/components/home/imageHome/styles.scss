@@ -1,0 +1,35 @@
+@use "/src/scss/index" as *;
+
+.imageHome {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  opacity: 50%;
+  height: 775px;
+  &__img {
+    width: 650px;
+  }
+  &__text {
+    position: relative;
+    height: 775px;
+    width: 650px;
+    margin-top: -765px;
+    opacity: 90%;
+    font-family: $font;
+    display: flex;
+    align-items: flex-end;
+    &__h1 {
+      width: 650px;
+      background: $red;
+      margin-bottom: 8px;
+      padding: 30px 0px 30px 30px;
+    }
+    &:hover {
+      opacity: 100%;
+    }
+  }
+  &:hover {
+    opacity: 100%;
+  }
+}

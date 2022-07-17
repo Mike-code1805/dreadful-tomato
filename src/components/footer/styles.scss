@@ -1,7 +1,29 @@
 @use "/src/scss/index" as *;
 
 .footer {
-  position: relative;
-  background-color: black;
-    
+  padding: 10px;
+  background-color: $black;
+  &__img {
+    display: flex;
+    justify-content: center;
+    &--width {
+      width: 220px;
+    }
+  }
+  &__linkFooter {
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 500px;
+    justify-content: center;
+  }
+  &__promotion {
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 500px;
+    justify-content: center;
+  }
+  &__message {
+    display: flex;
+    justify-content: center;
+  }
 }

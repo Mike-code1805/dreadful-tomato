@@ -1,0 +1,58 @@
+@use "/src/scss/index" as *;
+
+.slider {
+  position: relative;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px;
+  color: $white;
+  font-family: $font;
+  font-weight: bold;
+  &__left {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+    margin-right: 15px;
+    &:hover {
+      color: $gray-dark;
+    }
+    &:active {
+      color: $gray-light;
+    }
+  }
+  &__right {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    font-size: 20px;
+    &:hover {
+      color: $gray-dark;
+    }
+    &:active {
+      color: $gray-light;
+    }
+  }
+  &__text {
+    display: flex;
+    &__number {
+      cursor: pointer;
+      color: $white;
+      font-family: $font;
+      font-weight: bold;
+      font-size: large;
+      margin: 0px 5px 0px 5px;
+      padding: 15px;
+      background-color: $red;
+      border-radius: 50%;
+      opacity: 50%;
+      &:hover {
+        background-color: darken($red, 10%);
+      }
+      &:focus {
+        opacity: 100%;
+      }
+    }
+  }
+}
