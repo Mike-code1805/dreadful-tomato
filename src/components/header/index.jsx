@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Separator from "../../shared/separator";
 import NavFilter from "./navFilter";
 import NavLink from "./navLink";
@@ -9,10 +9,25 @@ import { useRouter } from "../../hooks/useRouter";
 import { useToggle } from "../../hooks/useToggle";
 import Calendary from "./calendary";
 import Filter from "./filter";
+import DataContext from "../../context/DataContext";
+import SerieContext from "../../context/contextSerie/SerieContext";
 
 const Header = () => {
   const { gotoHome, gotoMovies, gotoSeries } = useRouter();
   const { open, openCalen, handleToggle, handleToggleCalen } = useToggle();
+  const { clearData } = useContext(DataContext);
+  const { clearSerie } = useContext(SerieContext);
+
+  const gotoMoviesClick = () => {
+    gotoMovies();
+    clearData();
+  };
+
+  const gotoSeriesClick = () => { 
+    gotoSeries();
+    clearSerie();
+  };
+
   return (
     <>
       <div className="header">
@@ -25,8 +40,8 @@ const Header = () => {
               onClick={gotoHome}
             />
           </div>
-          <NavLink src="movies.png" text={"Movies"} onClick={gotoMovies} />
-          <NavLink src="series.png" text={"Series"} onClick={gotoSeries} />
+          <NavLink src="movies.png" text={"Movies"} onClick={gotoMoviesClick} />
+          <NavLink src="series.png" text={"Series"} onClick={gotoSeriesClick} />
         </div>
         <div className="header__utils">
           <Separator />

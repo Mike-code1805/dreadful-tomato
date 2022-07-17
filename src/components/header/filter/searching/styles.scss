@@ -22,13 +22,30 @@
   &__input {
     width: 90%;
     height: 70%;
-    border: none;
+    border: blue;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
     font-family: $font;
     &:focus {
       outline: none;
+    }
+  }
+  &__button {
+    width: 20%;
+    height: 70%;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: $font;
+    cursor: pointer;
+    background-color: $red;
+    border-radius: 10px;
+    color: $white;
+    &:active {
+      background-color: darken($red, 15%);;
     }
   }
 }

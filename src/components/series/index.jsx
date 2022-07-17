@@ -1,14 +1,14 @@
 import React, { useContext, useRef } from "react";
-import DataContext from "../../context/DataContext";
+import SerieContext from "../../context/contextSerie/SerieContext";
+import Cart from "../movies/cart";
+import Slider from "../movies/Slider";
 
-import Cart from "./cart";
-import Slider from "./Slider";
 import "./styles.scss";
 
-const Movies = () => {
+const Series = () => {
   const slide = useRef(null);
 
-  const { data } = useContext(DataContext);
+  const { data } = useContext(SerieContext);
 
   const handleClickRight = () => {
     if (slide.current.children.length > 0) {
@@ -75,4 +75,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default Series;
