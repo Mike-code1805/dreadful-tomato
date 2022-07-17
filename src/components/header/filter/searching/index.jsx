@@ -12,7 +12,7 @@ const Searching = ({ src, placeholder, onChange, onClick }) => {
         onChange={onChange}
         placeholder={placeholder}
       />
-      <button onClick={onClick} />
+      <button className="searching__button" onClick={onClick} >Buscar</button>
     </div>
   );
 };

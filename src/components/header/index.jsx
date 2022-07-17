@@ -10,15 +10,22 @@ import { useToggle } from "../../hooks/useToggle";
 import Calendary from "./calendary";
 import Filter from "./filter";
 import DataContext from "../../context/DataContext";
+import SerieContext from "../../context/contextSerie/SerieContext";
 
 const Header = () => {
   const { gotoHome, gotoMovies, gotoSeries } = useRouter();
   const { open, openCalen, handleToggle, handleToggleCalen } = useToggle();
   const { clearData } = useContext(DataContext);
+  const { clearSerie } = useContext(SerieContext);
 
   const gotoMoviesClick = () => {
     gotoMovies();
     clearData();
+  };
+
+  const gotoSeriesClick = () => { 
+    gotoSeries();
+    clearSerie();
   };
 
   return (
@@ -34,7 +41,7 @@ const Header = () => {
             />
           </div>
           <NavLink src="movies.png" text={"Movies"} onClick={gotoMoviesClick} />
-          <NavLink src="series.png" text={"Series"} onClick={gotoSeries} />
+          <NavLink src="series.png" text={"Series"} onClick={gotoSeriesClick} />
         </div>
         <div className="header__utils">
           <Separator />
